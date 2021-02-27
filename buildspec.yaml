@@ -1,0 +1,17 @@
+version: 0.2
+phases: 
+  install:
+    runtime-versions:
+       python: 3.8
+  build:
+    commands:
+    - pip install --upgrade awscli
+    - export Bucket=tosur-cloudcamp-chatbot
+    - >-
+      aws cloudformation package --template-file template.yaml --s3-bucket tosur-cloudcamp-chatbot
+      --output-template-file outputtemplate.yaml
+artifacts:
+  Type: zip
+  files: 
+    - template.yaml
+    - outputtemplate.yaml
