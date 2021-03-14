@@ -61,3 +61,44 @@ Europe (Ireland) | eu-west-1 | [![Launch Stack](https://cdn.rawgit.com/buildkite
 
 The CloudFormation deployment will take 20-30 minutes to complete.
 
+## Step 4 - Using the Retail Demo Store Web Application
+
+// Example
+Once you launch the CloudFormation stack, all of the services will go through a build and deployment cycle and deploy the Retail Demo Store. 
+
+Compiling and deploying the web UI application and the services it uses can take some time. You can monitor progress in CodePipeline. Until this completes, you may see a Sample Application when accessing the public WebUI URL.
+
+You can find the URL for the Retail Demo Store Web UI in the Outputs of your main CloudFormation stack (called `retaildemostore` unless you changed that option in the steps above). 
+
+Look for the "WebURL" output parameter.
+
+You can read more [detailed instructions on how to demo the Retail Demo Store in the Demo section at the end of this document](#delivering-a-demo-of-the-retail-demo-store).
+
+# Developer Instructions
+
+If you're interested in contributing enhancements, features, or fixes to the Retail Demo Store, please see the [Developer Instructions](./Developer-Instructions.md) for details on how to setup your local environment and deployment environment.
+
+# Delivering a Demo of the Retail Demo Store
+
+Once you have deployed the Retail Demo Store, you may want to walk through the demonstration guide to learn how to show the features the Retail Demo Store provides.
+
+The intent of the Retail Demo Store is to 1) provide a tool to demonstrate the capabilities of key AWS services for retail, eCommerce, and digital marketing use-cases and 2) provide a platform for individual AWS customers to step through workshops and AWS internal teams to deliver customer-facing workshops, Immersion Days, hackathons, and similar types of events.
+
+1) [Creating a Retail Demo Store account](./documentation/1-Creating-account.md)
+2) [Personalized Experience](./documentation/2-Personalization.md)
+
+# Known Issues
+
+* The application was written for demonstration purposes and not for production use.
+* You currently cannot deploy this project multiple times in the same AWS account and the same region. However, you can deploy the project into separate regions within the same AWS account.
+* Make sure your CloudFormation stack name uses all lowercase letters.
+* Currently only tested in the AWS regions provided in the deployment instructions above. The only limitation for deploying into other regions is [availability of all required services](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
+
+# Reporting Bugs
+
+If you encounter a bug, please create a new issue with as much detail as possible and steps for reproducing the bug. See the [Contributing Guidelines](./CONTRIBUTING.md) for more details.
+
+# License
+
+This sample code is made available under a modified MIT license. See the LICENSE file.
+
