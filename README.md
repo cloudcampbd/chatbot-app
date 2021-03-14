@@ -53,6 +53,8 @@ The following CloudFormation launch options will set the deployment approach to 
 With this deployment option, the CloudFormation template will import the Retail Demo Store source code into a CodeCommit repository in your account and setup CodePipeline to build and deploy into ECS from that respository.
 
 > Example
+
+
 Region name | Region code | Launch
 --- | --- | ---
 US East (N. Virginia) | us-east-1 | [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://google.com)
